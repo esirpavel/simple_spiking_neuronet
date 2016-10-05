@@ -16,7 +16,7 @@ for l in rdr:
     times.append(l[0])
     neurons.append(l[1])
 f.close()
-    
+
 times = np.array(times, dtype="float")
 neurons = np.array(neurons, dtype="int")
 ax00 = pl.subplot(211)
@@ -32,4 +32,4 @@ ax10.set_ylim(0., max(hi[0]))
 ax10.set_ylabel(u"Количество спайков в 1 мс")
 ax10.set_xlabel(u"Время, мс")
 ax10.grid()
-pl.show()  
+pl.show()

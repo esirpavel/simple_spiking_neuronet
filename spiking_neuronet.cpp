@@ -133,7 +133,7 @@ int main(){
 			y[con][t] = y[con][t-1]*expire_coeff;
 
 			if (Vms[pre_conns[con]][t-1] > Vpeak){
-				y[con][t] = 1.0f;
+				y[con][t] += 1.0f;
 			}
 			Isyn[post_conns[con]] += y[con][t]*weights[con];
 		}
