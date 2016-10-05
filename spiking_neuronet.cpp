@@ -71,7 +71,7 @@ void init_connections(){
 void init_neurons(){
 	for (int neur_idx = 0; neur_idx < Nneur; neur_idx++){
 		// случайно разбрасываем приложенные токи
-		Iex[neur_idx] = (rand() % (int) (Iex_max*10))/10.0f;
+		Iex[neur_idx] = ((float) rand() / RAND_MAX) * Iex_max;
 		Isyn[neur_idx] = 0.0f;
 		Vms[neur_idx][0] = V0;
 		Ums[neur_idx][0] = U0;
